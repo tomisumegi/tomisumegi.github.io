@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<title>Portfólió</title>
+<style>
+
+* { /*az egész oldal méretezésének egyszerűsítése*/
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom right, #ecfdf5, #f8fafc);
+    color: #1f2937;
+}
+
+header { /*fejléc container, ebbe beletartozik a navbar és társai, nev, illetve a hero-k is*/
+    background: linear-gradient(135deg, #064e3b, #065f46);
+    color: white;
+}
+.nev {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.navbar { /*fejléc container*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+}
+.nav-links { /*container a tantárgyakra/önéletrajzra átvezető linkekre*/
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-links a { /*gombbá változtatja a linket*/
+    padding: 8px 20px;
+    background: #34d399;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.nav-links a:hover { /*effektet ad a gomboknak ha a kurzor rajta van a gombon*/
+    background: #10b981;
+    transform: translateY(-2px);
+}
+
+.banki { /*bánki logo container*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banki-logo { /*maga a logo elhelyezése és kinézete*/
+  position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.hero { /*cím rész box*/
+    text-align: center;
+    padding: 10px 20px 40px 20px;
+    position: relative;
+}
+
+.hero h1 { /*főcím*/
+    margin: 0;
+    font-size: 38px;
+}
+
+.hero p { /*alcím*/
+    margin-top: 15px;
+    font-size: 17px;
+    opacity: 0.85;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero::after { /*zöld csík a címek alatt*/
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #a7f3d0;
+    margin: 30px auto 0 auto;
+    border-radius: 2px;
+}
+
+.section-title { /*tantárgyak feletti cím a zöld fejléc alatt*/
+    text-align: center;
+    margin-top: 60px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #065f46;
+}
+
+.grade-section { /*évfolyamok szétválasztása*/
+    max-width: 1100px;
+    margin: 50px auto 20px auto;
+    padding: 0 20px;
+}
+
+.grade-title { /*évfolyamok neveinek kinézete*/
+    font-size: 20px;
+    font-weight: 700;
+    color: #047857;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 6px solid #34d399;
+}
+
+.cards { /*a dobozok felépítése*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /*felossza a helyet a dobozok között, nem engedi hogy 260px alatt legyen akármelyik*/
+    gap: 28px;
+}
+
+.card { /*fehér doboz a tantárgyaknak*/
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transition: all 0.25s ease;
+    border-left: 5px solid #34d399;
+    text-decoration: none;
+    color: #1f2937;
+    display: block;
+}
+
+.card:hover { /*effektet ad a dobozoknak ha a kurzor rajta van*/
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+    background: rgba(16, 185, 129, 0.06);
+}
+
+.card h3 { 
+    margin: 0;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) { /*emiatt egy kisebb képernyős eszközről átlátható*/
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+.grade-section:last-of-type { /*utolsó évfolyam tantárgyai alatt hagy helyet, hogy ne legyen túl közel a lap alja*/
+    margin-bottom: 120px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="nev">SÜMEGI TAMÁS</div>
+        <div class="nav-links">
+            <div class="banki">
+            <a href="SümegiTamásAngolCV.html">Önéletrajz</a>
+            <img src="banki2.jpg" class="banki-logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="hero">
+        <h1>Portfólió</h1>
+        <p>Ipari informatika</p>
+    </div>
+</header>
+
+<h2 class="section-title" id="projektek">Tantárgyak</h2>
+<!-- 11. évfolyam -->
+<section class="grade-section">
+    <div class="grade-title">11. évfolyam</div>
+    <div class="cards">
+        <a class="card" href="Analóg_áramkörök.html">
+            <h3>Analóg áramkörök</h3>
+        </a>
+
+        <a class="card" href="Digitális_áramkörök.html">
+            <h3>Digitális áramkörök</h3>
+        </a>
+
+        <a class="card" href="Elektronika.html">
+            <h3>Elektronika</h3>
+        </a>
+
+        <a class="card" href="Programozás_alapjai.html">
+            <h3>Programozás alapjai</h3>
+        </a>
+    </div>
+</section>
+
+<!-- 12. évfolyam -->
+<section class="grade-section">
+    <div class="grade-title">12. évfolyam</div>
+    <div class="cards">
+        <a class="card" href="Adatbázis_kezelés.html">
+            <h3>Adatbázis kezelés</h3>
+        </a>
+
+        <a class="card" href="Hálózat_kezelés.html">
+            <h3>Hálózat kezelés</h3>
+        </a>
+
+        <a class="card" href="Mikrovezérlő_programozás.html">
+            <h3>Mikrovezérlő programozás</h3>
+        </a>
+
+        <a class="card" href="PLC_programozás.html">
+            <h3>PLC programozás</h3>
+        </a>
+
+        <a class="card" href="Számítógépes_szimuláció.html">
+            <h3>Számítógépes szimuláció</h3>
+        </a>
+    </div>
+</section>
+
+<!--13. évfolyam-->
+<section class="grade-section">
+    <div class="grade-title">13. évfolyam</div>
+    <div class="cards">
+        <a class="card" href="IoT.html">
+            <h3>IoT</h3>
+        </a>
+
+        <a class="card" href="Robottechnika.html">
+            <h3>Robottechnika, CAD</h3>
+        </a>
+        <a class="card" href="Programfejlesztés.html">
+            <h3>Programfejlesztés</h3>
+        </a>
+                <a class="card" href="Irányítástechnika.html">
+            <h3>Irányítástechnika</h3>
+        </a>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<title>Programozás alapjai</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom right, #ecfdf5, #f8fafc);
+    color: #1f2937;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #064e3b, #065f46);
+    color: white;
+    padding: 20px 60px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.back { /*Vissza gomb*/
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 20px;
+    background: #34d399;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.back:hover {
+    background: #10b981;
+    transform: translateY(-2px);
+}
+
+.embed-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    border-radius: 14px;
+    overflow: hidden;
+    background: white;
+    flex-grow: 1;
+}
+
+.embed-container embed {
+    width: 100%;
+    height: 100vh;
+    max-height: calc(100vh - 140px);
+    display: block;
+}
+
+@media (max-width: 768px) {
+    header { padding: 15px 20px; }
+    header h1 { font-size: 28px; }
+    .embed-container { margin: 20px auto; }
+    .embed-container embed { max-height: calc(100vh - 120px); }
+}
+</style>
+</head>
+
+<body>
+<header>
+    <h1>Programozás alapjai</h1>
+    <a class="back" href="index.html">Vissza a főoldalra</a>
+</header>
+
+<div class="embed-container">
+    <embed src="Programozas_alapjai.pdf" type="application/pdf">
+</div>
+</body>
+</html>
